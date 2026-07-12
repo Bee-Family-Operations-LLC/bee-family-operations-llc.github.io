@@ -1,16 +1,19 @@
 # Bee Family Operations LLC
-## Sovereign Systems & Fiduciary Architecture
 
-### CORE OPERATIONAL MANDATE
-We architect deterministic systems, secure digital infrastructure, and sovereign asset management protocols for private entities.
+## Institutional Architecture
+This repository contains the administrative frameworks, digital integrity protocols, and sovereign operational structures for Bee Family Operations LLC.
 
-### SYSTEM CAPABILITIES
-*   **Fiduciary Engineering:** Structural analysis of corporate administrative systems, debt-book optimization, and private ledger architecture.
-*   **Cryptographic Provenance:** Implementation of immutable asset-tracking protocols, digital IP tokenization, and SHA-256 integrity verification.
-*   **Operational Development:** Deployment of local-first administrative frameworks and custom software environments designed for maximum operational security.
+## Operational Standards
+* **Fiduciary Integrity:** Our methodology treats digital assets with the same care as physical instruments, utilizing SHA-256 integrity verification.
+* **Data Sovereignty:** We prioritize local-first administrative frameworks, reducing reliance on third-party SaaS.
+* **Deterministic Systems:** All processes are codified to minimize human error and ensure auditability.
 
-### ENGAGEMENT PROTOCOL
-Engagements are restricted to pre-validated corporate entities and private trusts. All transactions are settled via verified P2P instruments. We do not participate in public-market retail.
+## Documentation
+* [Fiduciary Methodology](docs/fiduciary-methodology.md) - Our core operational constitution.
+* [E-24 Vault Overview](docs/e24-vault-overview.md) - Technical specifications for our administrative vault.
+
+## Digital Provenance Utilities
+* [Audit Hash Utility](scripts/audit-hash.ps1) - Recursive SHA-256 hashing for file integrity verification.
 
 ---
-*Fiduciary Integrity | Operational Sovereignty*
+*Authorized for internal and private-partner review. Unauthorized distribution is prohibited.*
