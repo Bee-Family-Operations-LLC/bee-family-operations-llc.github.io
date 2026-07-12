@@ -4,89 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bee Family Operations | Institutional Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-start: #0f172a;
-            --bg-end: #020617;
-            --card-bg: rgba(30, 41, 59, 0.6);
-            --text-main: #f1f5f9;
-            --accent: #38bdf8;
-            --border: rgba(255, 255, 255, 0.15);
+            --bg-color: #0d1117;
+            --border-color: #30363d;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --link-color: #58a6ff;
+            --header-bg: #161b22;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: radial-gradient(circle at top right, var(--bg-start), var(--bg-end));
-            background-attachment: fixed;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
-            padding: 80px;
+            padding: 40px;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        header { 
-            border-bottom: 2px solid var(--accent); 
-            margin-bottom: 60px; 
-            padding-bottom: 30px; 
+        header {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 20px;
         }
 
-        h1 { 
-            font-size: 3rem; 
-            font-weight: 700; 
-            margin: 0; 
-            color: #fff; 
+        h1 { font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0; }
+        p { color: var(--text-muted); font-size: 0.9rem; margin-top: 5px; }
+
+        .file-list {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
         }
 
-        p { 
-            font-size: 1.2rem; 
-            color: #94a3b8; 
-            margin-top: 10px; 
-        }
-
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 25px; 
-        }
-
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 40px;
-            border-radius: 12px;
-            text-decoration: none;
-            color: var(--text-main);
+        .file-row {
             display: flex;
-            flex-direction: column;
-            gap: 15px;
-            transition: 0.3s;
+            align-items: center;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+            text-decoration: none;
+            color: var(--link-color);
+            background: var(--header-bg);
+            font-family: monospace;
+            font-size: 0.95rem;
         }
 
-        .card:hover { 
-            border-color: var(--accent); 
-            background: rgba(30, 41, 59, 0.9);
-            transform: translateY(-10px);
-        }
-
-        .card span { font-size: 1.5rem; font-weight: 600; }
+        .file-row:last-child { border-bottom: none; }
+        .file-row:hover { background: #1f242c; text-decoration: underline; }
+        .file-row::before { content: "📄"; margin-right: 10px; color: var(--text-muted); }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Bee Family Operations LLC</h1>
-            <p>Independent Administrative Frameworks & Institutional Integrity</p>
+            <p>Independent Administrative Frameworks</p>
         </header>
-        <div class="grid">
-            <a href="README.md" class="card"><span>Institutional Overview</span></a>
-            <a href="docs/fiduciary-methodology.md" class="card"><span>Fiduciary Methodology</span></a>
-            <a href="docs/e24-vault-overview.md" class="card"><span>E-24 Vault Overview</span></a>
-            <a href="docs/audit-hash-utility.md" class="card"><span>Digital Integrity Utility</span></a>
+
+        <div class="file-list">
+            <a href="README.md" class="file-row">README.md</a>
+            <a href="docs/fiduciary-methodology.md" class="file-row">docs/fiduciary-methodology.md</a>
+            <a href="docs/e24-vault-overview.md" class="file-row">docs/e24-vault-overview.md</a>
+            <a href="docs/audit-hash-utility.md" class="file-row">docs/audit-hash-utility.md</a>
         </div>
     </div>
 </body>
