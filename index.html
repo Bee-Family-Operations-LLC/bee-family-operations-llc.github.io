@@ -2,20 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bee Family Operations | Institutional Portal</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0d1117;
-            --card-bg: #161b22;
-            --text-main: #c9d1d9;
-            --text-muted: #8b949e;
-            --accent: #58a6ff;
-            --border: #30363d;
+            /* Professional Institutional Palette */
+            --bg-start: #0f172a;
+            --bg-end: #020617;
+            --card-bg: rgba(30, 41, 59, 0.6);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --border: rgba(255, 255, 255, 0.1);
         }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
+            background: radial-gradient(circle at top right, var(--bg-start), var(--bg-end));
+            background-attachment: fixed;
             color: var(--text-main);
             margin: 0;
             display: flex;
@@ -23,30 +28,65 @@
             align-items: center;
             min-height: 100vh;
         }
+
         .container {
             width: 100%;
             max-width: 600px;
             padding: 40px;
         }
-        header { border-bottom: 1px solid var(--border); margin-bottom: 30px; padding-bottom: 20px; }
-        h1 { font-size: 1.5rem; font-weight: 600; margin: 0; color: #fff; }
-        p { color: var(--text-muted); margin-top: 5px; font-size: 0.9rem; }
+
+        header { 
+            border-bottom: 1px solid var(--border); 
+            margin-bottom: 30px; 
+            padding-bottom: 20px; 
+        }
+
+        h1 { 
+            font-size: 1.8rem; 
+            font-weight: 600; 
+            margin: 0; 
+            color: #fff; 
+            letter-spacing: -0.02em;
+        }
+
+        p { 
+            color: var(--text-muted); 
+            margin-top: 5px; 
+            font-size: 0.95rem; 
+        }
+
         .grid { display: grid; gap: 15px; }
+
         .card {
             background: var(--card-bg);
             border: 1px solid var(--border);
-            padding: 20px;
+            padding: 22px;
             border-radius: 8px;
-            transition: 0.2s;
+            transition: all 0.2s ease;
             text-decoration: none;
             color: var(--text-main);
             display: flex;
             align-items: center;
             justify-content: space-between;
+            backdrop-filter: blur(10px);
         }
-        .card:hover { border-color: var(--accent); background: #1f242c; }
+
+        .card:hover { 
+            border-color: var(--accent); 
+            background: rgba(30, 41, 59, 0.8);
+            transform: translateX(5px);
+        }
+
         .card span { font-weight: 600; }
-        .card::after { content: '→'; color: var(--accent); }
+        
+        .card::after { 
+            content: '→'; 
+            color: var(--accent); 
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .card:hover::after { opacity: 1; }
     </style>
 </head>
 <body>
