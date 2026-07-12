@@ -2,34 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bee Family Operations LLC | Sovereign Infrastructure</title>
+    <title>Bee Family Operations | Institutional Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height: 1.6; 
-            max-width: 800px; 
-            margin: 40px auto; 
-            padding: 0 20px; 
-            background-color: #1a1a1a; 
-            color: #e0e0e0; 
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --border: #30363d;
         }
-        h1 { color: #5dade2; }
-        nav ul { list-style: none; padding: 0; }
-        nav li { margin: 15px 0; border-bottom: 1px solid #333; padding-bottom: 5px; }
-        a { color: #5dade2; text-decoration: none; font-weight: bold; }
-        a:hover { color: #a9cce3; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+        }
+        header { border-bottom: 1px solid var(--border); margin-bottom: 30px; padding-bottom: 20px; }
+        h1 { font-size: 1.5rem; font-weight: 600; margin: 0; color: #fff; }
+        p { color: var(--text-muted); margin-top: 5px; font-size: 0.9rem; }
+        .grid { display: grid; gap: 15px; }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 8px;
+            transition: 0.2s;
+            text-decoration: none;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .card:hover { border-color: var(--accent); background: #1f242c; }
+        .card span { font-weight: 600; }
+        .card::after { content: '→'; color: var(--accent); }
     </style>
 </head>
 <body>
-    <h1>Bee Family Operations LLC</h1>
-    <p>Operational Portal: Sovereign Administrative Frameworks & Digital Integrity</p>
-    <nav>
-        <ul>
-            <li><a href="README.md">Institutional Overview</a></li>
-            <li><a href="docs/fiduciary-methodology.md">Fiduciary Methodology</a></li>
-            <li><a href="docs/e24-vault-overview.md">E-24 Vault Overview</a></li>
-            <li><a href="scripts/audit-hash.ps1">Digital Integrity Utility</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <header>
+            <h1>Bee Family Operations LLC</h1>
+            <p>Sovereign Administrative Frameworks</p>
+        </header>
+        <div class="grid">
+            <a href="README.md" class="card"><span>Institutional Overview</span></a>
+            <a href="docs/fiduciary-methodology.md" class="card"><span>Fiduciary Methodology</span></a>
+            <a href="docs/e24-vault-overview.md" class="card"><span>E-24 Vault Overview</span></a>
+            <a href="scripts/audit-hash.ps1" class="card"><span>Digital Integrity Utility</span></a>
+        </div>
+    </div>
 </body>
 </html>
